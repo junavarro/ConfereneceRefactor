@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-toolbar color="workshop">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>About</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="presentPopover($event)">
+        <ion-icon slot="icon-only" name="more"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="about-header">
+    <img src="assets/img/logo.png"  height="150" alt="ionic logo">
+  </div>
+  <div class="about-info">
+    <h4 class="ion-padding-start dark-text">IV Conferencia de Profesores de Inglés 2019</h4>
+
+    <ion-list lines="none" padding>
+      <ion-item>
+        <ion-icon name="calendar" slot="start"></ion-icon>
+        <ion-label position="stacked">Date</ion-label>
+        <ion-datetime class="dark-text" displayFormat="MMM DD, YYYY" max="2056" [(ngModel)]="conferenceDate"></ion-datetime>
+      </ion-item>
+
+      <ion-item>
+        <ion-icon name="pin" slot="start"></ion-icon>
+        <ion-label class="dark-text" position="stacked">Location</ion-label>
+        <ion-text class="dark-text">
+            Instituto Tecnológico de Costa Rica
+        </ion-text>
+        <!-- <ion-select>
+          
+          <ion-select-option value="madison" selected></ion-select-option> 
+        </ion-select> -->
+      </ion-item>
+    </ion-list>
+
+    <p class="ion-padding-start ion-padding-end dark-text">
+        The Costa Rica Institute of Technology and its Language Science School have worried
+over the years about the training of teachers of English in our country. One of our
+purposes is to bring teachers together so that they can share their experiences in the
+different fields related to teaching, from activities that are successful in the classroom to
+the latest in pedagogy, the use of technology in teaching and learning, methodology,
+professional development, research related to English teaching and others. With this
+purpose in mind, we have organized the IV Conference of Teachers of English TEC
+2019. The conference’s main theme is Challenges and Opportunities in 21st Century
+English Teaching and we will have presentations with experts from Costa Rica and
+other countries who will share their knowledge and experience in the field of English
+teaching.
+    </p>
+  </div>
+</ion-content>

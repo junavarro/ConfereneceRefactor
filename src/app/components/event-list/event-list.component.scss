@@ -1,0 +1,74 @@
+$categories: (
+  ionic: var(--ion-color-primary),
+  angular: #ac282b,
+  communication: #8e8d93,
+  tooling: #fe4c52,
+  services: #fd8b2d,
+  design: #fed035,
+  workshop: #69bb7b,
+  documentation: #b16be3,
+  navigation: #6600cc
+);
+
+
+ion-card-content{
+  max-height: 500px !important;
+  overflow-y: scroll;
+  //background: blue;
+}
+
+@each $track, $value in map-remove($categories) {
+  ion-item-sliding[track='#{$track}'] ion-label {
+    border-left: 2px solid $value;
+    padding-left: 10px;
+  }
+}
+.dayKey{
+  color: #868B8E; 
+}
+ion-grid{
+  min-width: 100%;
+}
+
+ion-item.rounded{
+  --border-radius: 10px !important;
+  margin-top: 2%;
+  max-width: 450px;
+}
+.rounded.sc-ion-item-md-h.item-label.item.md.in-list.ion-activatable.ion-focusable.hydrated{
+
+  --border-radius: 10px !important;
+  margin-top: 2%;
+  max-width: 450px;
+}
+
+.conf-event-displayName{
+  text-transform: uppercase;
+  font-size: 0.8em;
+}
+
+.conf-event-description{
+  font-size: 0.6em;
+}
+
+.conf-circle{
+  width: 27px;
+  height: 27px;
+  border-radius: 27px;
+  background: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.no-border{
+  border-style: none;
+  border-radius: unset;
+  box-shadow: none;
+}
+
+.ion-align-items-center{
+  border-radius: 20px;
+  margin: 4px;
+}

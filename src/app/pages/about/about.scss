@@ -1,0 +1,43 @@
+.about-header {
+  background-color: var(--ion-color-light);
+  padding: 16px;
+  width: 100%;
+  height: 30%;
+  text-align: center;
+  background: var(--ion-color-light);
+}
+
+.about-header img {
+  max-height: 100%;
+  background: var(--ion-color-light);
+}
+
+.about-info p {
+  color: var(--ion-color-dark);
+  text-align: left;
+  background: var(--ion-color-light);
+}
+
+.about-info ion-icon {
+  margin-inline-end: 32px;
+  --background: var(--ion-color-light);
+}
+
+.ios .about-info {
+  text-align: center;
+  background: var(--ion-color-light);
+}
+
+.dark-text{
+  color: var(--ion-color-dark-tint);
+}
+ion-content{
+  --background: var(--ion-color-light);
+}
+
+ion-list{
+  background: var(--ion-color-light);
+  ion-item{
+    --background: var(--ion-color-light);
+  }
+}

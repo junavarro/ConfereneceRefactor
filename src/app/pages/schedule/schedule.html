@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar color="workshop">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+
+    <ion-segment  [(ngModel)]="segment" (ionChange)="updateSchedule()">
+      <ion-segment-button value="all">
+        All
+      </ion-segment-button>
+      <ion-segment-button value="favorites" routerLink="/favorites"  >
+        Favorites
+      </ion-segment-button>
+    </ion-segment>
+
+    <ion-buttons slot="end">
+      <ion-button (click)="presentFilter()">
+        <ion-icon  slot="icon-only" name="options"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+
+  <ion-toolbar color="workshop">
+    <ion-searchbar [(ngModel)]="queryText" (ionChange)="updateSchedule()" placeholder="Search"></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-slides pager="true" #slideWithNav (ionSlideWillChange)="slideChanged(slideWithNav)">
+    <ion-slide *ngFor="let day of confDays " >
+      <event-list [dayKey]="day" [filters]="filterOptions" [searchText]="queryText" #EventListElement (changeslide)="onChange($event,slideWithNav)"></event-list>
+    </ion-slide>
+  </ion-slides>
+</ion-content>

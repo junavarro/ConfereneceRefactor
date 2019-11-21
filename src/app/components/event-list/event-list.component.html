@@ -1,0 +1,59 @@
+<ion-card class="no-border">
+  <ion-card-header>
+    
+    <ion-card-title>
+      <ion-row  class="dayKey ion-justify-content-between" >
+        <ion-icon (click)="changeSlide(0)" name="arrow-back"></ion-icon>
+        <ion-label >
+          {{data.date.displayName}}
+        </ion-label>
+        <ion-icon (click)="changeSlide(1)" name="arrow-forward"></ion-icon>
+      </ion-row>
+    </ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    <ion-list #scheduleList [hidden]="shownSessions === 0" *ngIf="!isLoading">
+      <ion-item-group  *ngFor="let group of data.groups" >
+        <ion-label class="ion-text-start" *ngIf="group.sessions.length  > 0">
+          {{group.time}} 
+        </ion-label>
+
+        <ion-item  class="rounded" color="{{session.eventType.objectKey}}"
+          routerLink="/app/tabs/schedule/session/{{session.id}}" *ngFor="let session of group.sessions | eventQuery:searchText"
+          [attr.track]="session.tracks[0] | lowercase" [hidden]="!checkVisible(session.eventType.objectKey)">
+          <ion-grid>
+            <ion-row class="ion-align-items-center">
+              <ion-col class="ion-align-self-center" size="2">
+                <div class="conf-circle">
+                  <ion-icon color="{{session.eventType.objectKey}}" name="{{session.eventType.icon}}"></ion-icon>
+                </div>
+              </ion-col>
+              <ion-col size="10">
+
+                <strong class="conf-event-displayName">
+                  {{session.displayName}}
+                </strong>
+
+                <p class="conf-event-description">
+                 {{session.description  | slice:0:60}}
+                </p>
+
+
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+
+
+
+          <ion-label>
+            <ion-text color="secondary">
+              <p></p>
+            </ion-text>
+           
+          </ion-label>
+        </ion-item>
+
+      </ion-item-group>
+    </ion-list>
+  </ion-card-content>
+</ion-card>

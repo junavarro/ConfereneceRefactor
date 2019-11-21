@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "189052291621",
+    "firebase_url": "https://conferencia-profesores-ingles.firebaseio.com",
+    "project_id": "conferencia-profesores-ingles",
+    "storage_bucket": "conferencia-profesores-ingles.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:189052291621:android:c882f1a958b27247358dcc",
+        "android_client_info": {
+          "package_name": "cr.gotouch.conferenceapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "189052291621-jsob0b6ti5lsvei24mcbkq4qpsh8132h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCR0ZvLPl1mSupzq833Ek0Lcv1XsDn7Ows"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "189052291621-jsob0b6ti5lsvei24mcbkq4qpsh8132h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

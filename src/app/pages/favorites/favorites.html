@@ -1,0 +1,49 @@
+<ion-header>
+    <ion-toolbar color="workshop">
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>Favorites</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-list #scheduleFavoriteList *ngIf="!isLoading">
+
+        <ion-item class="rounded" 
+            color="{{session.eventType.objectKey}}"
+            routerLink="/app/tabs/schedule/session/{{session.id}}" 
+            *ngFor="let session of favoriteSessions"
+            [attr.track]="session.tracks[0] | lowercase">
+            <ion-grid>
+                <ion-row class="ion-align-items-center">
+                    <ion-col class="ion-align-self-center" size="2">
+                        <div class="conf-circle">
+                            <ion-icon color="{{session.eventType.objectKey}}" name="{{session.eventType.icon}}">
+                            </ion-icon>
+                        </div>
+                    </ion-col>
+                    <ion-col size="10">
+                        <strong class="conf-event-displayName">
+                            {{session.displayName}}
+                        </strong>
+                        <p class="conf-event-description">
+                            {{session.description  | slice:0:60}}
+                        </p>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+
+
+
+            <ion-label>
+                <ion-text color="secondary">
+                    <p></p>
+                </ion-text>
+
+            </ion-label>
+        </ion-item>
+
+      
+    </ion-list>
+</ion-content>

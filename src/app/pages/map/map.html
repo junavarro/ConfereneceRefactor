@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Map</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+
+  <div #mapCanvas class="map-canvas"></div>
+  <ion-fab   vertical="bottom" horizontal="start">
+      <ion-fab-button color="dark"><ion-icon name="map"></ion-icon></ion-fab-button>
+    
+      <ion-fab-list side="top">
+        <ion-fab-button color="danger" (click)="showFoodPlaces()"><ion-icon name="pizza"></ion-icon></ion-fab-button>
+        <ion-fab-button color="tertiary"(click)="showWorkShopPlaces()"><ion-icon name="flask"></ion-icon></ion-fab-button>
+        <ion-fab-button color="primary" (click)="showPlenaryPlaces()"><ion-icon name="contacts"></ion-icon></ion-fab-button>
+      </ion-fab-list>
+    
+      <ion-fab-list side="end">
+        <ion-fab-button color="warning" (click)="showTouristicPlaces()"><ion-icon name="happy"></ion-icon></ion-fab-button>
+      </ion-fab-list>
+    
+    </ion-fab>
+</ion-content>

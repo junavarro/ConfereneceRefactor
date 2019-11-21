@@ -1,5 +1,7 @@
 {
   "name": "ConferenceRefactor",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

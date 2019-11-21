@@ -1,0 +1,72 @@
+<ion-header >
+  <ion-toolbar color="workshop">
+    <ion-buttons  slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Speakers</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="outer-content">
+    
+  <ion-list>
+    <ion-grid fixed>
+      <ion-row class="ion-align-items-stretch">
+        <ion-col size="12" size-md="6" *ngFor="let speaker of speakers">
+
+          <div color="workshop">
+
+            <ion-grid color="workshop">
+              <ion-row 	>
+                <ion-col size="3"class="ion-no-padding thumbnail-container">
+                  <!-- <ion-thumbnail class="speaker-thumbnail" slot="start">
+
+                    <ion-img class="round-thumbnail" [src]="'http://lorempixel.com/400/400/people/'"></ion-img>
+                  </ion-thumbnail> -->
+       
+                    <img class="round-thumbnail" src="{{speaker.avatar}}" alt="">
+               
+                </ion-col>
+                <ion-col size="9"class="user">
+                  <ion-grid color="workshop">
+                    <ion-row class="ion-align-items-start">
+                      <p class="white-text">
+                        {{speaker.displayName}}
+                      </p>
+                    </ion-row>
+                    <ion-row class="ion-no-padding ion-align-items-start ion-no-margin">
+                      <p class="white-text">
+                        {{speaker.origin[0]}}
+                      </p>
+                    </ion-row>
+                    <ion-row class="ion-no-padding ion-align-items-start  ion-no-margin">
+                      <ion-col class="ion-align-self-center">
+                        <ion-icon class="white-text" name="mail"></ion-icon>
+                      </ion-col>
+                      <ion-col class="ion-align-self-center" size="8">
+                        <p class="white-text">
+                          {{speaker.social[0].user}}
+                        </p>
+                      </ion-col>
+                      <ion-col class="ion-align-self-center" size="2">
+                        <ion-icon class="white-text" name="arrow-down"></ion-icon>
+                      </ion-col>
+                    </ion-row>
+                  </ion-grid>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+            <ion-card color="workshop" padding >
+
+              <div class="restrict-text">
+                {{speaker.biodata}}
+              </div>
+
+
+            </ion-card>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-list>
+</ion-content>

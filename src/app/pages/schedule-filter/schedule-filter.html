@@ -1,0 +1,64 @@
+<ion-header translucent>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button *ngIf="ios" (click)="dismiss()">Cancel</ion-button>
+      <ion-button *ngIf="!ios" (click)="selectAll(false)">Reset</ion-button>
+    </ion-buttons>
+
+    <ion-title>
+      Filter Sessions
+    </ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button (click)="applyFilters()" strong>Done</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+
+  <ion-list [lines]="ios ? 'inset' : 'full'">
+    <ion-list-header>Types</ion-list-header>
+
+    <!-- <ion-item *ngFor="let track of eventsTypes">
+      <ion-icon *ngIf="ios" slot="start" [name]="track.icon" color="medium"></ion-icon>
+      <ion-label>{{track.displayName}}</ion-label>
+      <ion-checkbox [(ngModel)]="track.isChecked"></ion-checkbox>
+    </ion-item> -->
+
+    <ion-item >
+      <ion-icon *ngIf="ios" slot="start" [name]="track.icon" color="medium"></ion-icon>
+      <ion-label>{{options.plenary.displayName}}</ion-label>
+      <ion-checkbox [(ngModel)]="options.plenary.isChecked"></ion-checkbox>
+    </ion-item>
+    <ion-item >
+      <ion-icon *ngIf="ios" slot="start" [name]="options.icon" color="medium"></ion-icon>
+      <ion-label>{{options.food.displayName}}</ion-label>
+      <ion-checkbox [(ngModel)]="options.food.isChecked"></ion-checkbox>
+    </ion-item>
+    <ion-item >
+      <ion-icon *ngIf="ios" slot="start" [name]="options.icon" color="medium"></ion-icon>
+      <ion-label>{{options.workshop.displayName}}</ion-label>
+      <ion-checkbox [(ngModel)]="options.workshop.isChecked"></ion-checkbox>
+    </ion-item>
+    <ion-item >
+      <ion-icon *ngIf="ios" slot="start" [name]="options.icon" color="medium"></ion-icon>
+      <ion-label>{{options.other.displayName}}</ion-label>
+      <ion-checkbox [(ngModel)]="options.other.isChecked"></ion-checkbox>
+    </ion-item>
+
+
+  </ion-list>
+
+</ion-content>
+
+<ion-footer translucent *ngIf="ios">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="selectAll(false)">Deselect All</ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button (click)="selectAll(true)">Select All</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>
