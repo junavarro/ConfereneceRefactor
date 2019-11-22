@@ -28,7 +28,9 @@ export class ToastServiceService {
           text: 'Check',
           handler: () => {
             console.log('Check clicked');
-            this.router.navigateByUrl(data.url);
+            if(data.url){
+              this.router.navigateByUrl(data.url);
+            }
           }
         }, {
           text: 'Done',

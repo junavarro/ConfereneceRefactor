@@ -383,19 +383,28 @@
       "lat": 9.8574841,
       "lng": -83.9115953,
       "center": true,
+      "price":"N/A",
+      "description": "Institutional dining room",
+      "phone": "+506 25509104",
       "icon": "https://maps.google.com/mapfiles/kml/shapes/info.png"
     },
     {
       "name": "E. Ciencias del Lenguaje",
       "lat": 9.8549238,
       "lng": -83.9079342,
-      "icon": "https://maps.google.com/mapfiles/kml/shapes/ranger_station.png"
+      "icon": "https://maps.google.com/mapfiles/kml/shapes/ranger_station.png",
+      "price":"N/A",
+      "description": "The School of Language Sciences is a teaching service unit whose objective is to contribute to the integral training of students.",
+      "phone": "+506 25509104"
     },
     {
       "name": "Comedor Institucional",
       "lat": 9.8554074,
       "lng": -83.912899,
-      "icon": "https://maps.google.com/mapfiles/kml/shapes/snack_bar.png"
+      "icon": "https://maps.google.com/mapfiles/kml/shapes/snack_bar.png",
+      "price":"N/A",
+      "description": "N/A",
+      "phone": "N/A"
     },
     {
       "name": "CantaRana",
@@ -404,6 +413,7 @@
       "best": ["Pizzas", "Mexican food", "Burgers", "crepes", "fajitas", "sushi","Wings", "fish."],
       "price": "¢4.000-5.000",
       "phone": "6264 5995",
+      "description":"Pizzas, Mexican food, Burgers, crepes, fajitas, sushi, Wings and fish.",
       "icon": "https://maps.google.com/mapfiles/kml/shapes/snack_bar.png"
     },
     {
@@ -412,6 +422,7 @@
       "lng": -83.9196402,
       "best": ["burgers", "sandwiches", "plate of the day", "casado", "tortillas", "crepes   Sweet and salty."],
       "price": "¢3.000 y 4 000",
+      "description": "Burgers, sandwiches, plate of the day, casado, tortillas, crepes Sweet and salty.",
       "phone": "2553 0924",
       "icon": "https://maps.google.com/mapfiles/kml/shapes/coffee.png"
     },
@@ -422,6 +433,7 @@
       "best": ["Dish of the day", "sandwich", "arreglados",  "and cake shop"],
       "price": "¢2000 y 4000",
       "phone": "2552 4043",
+      "description":"Dish of the day, sandwich, arreglados and cake shop",
       "icon": "https://maps.google.com/mapfiles/kml/shapes/coffee.png"
     },
     {
@@ -449,6 +461,7 @@
       "best": ["crepes", "nachos", "salads", "burgers", "burritos", "pasta",  "casados", "dish of the day", "planks"," meats"],
       "price": "¢ 3 000 y 5 000",
       "phone": "2552 5800",
+      "description":"crepes, nachos, salads, burgers, burritos, pasta, casados, dish of the day, planks and meats",
       "icon": "https://maps.google.com/mapfiles/kml/shapes/snack_bar.png"
     },
     {
@@ -458,7 +471,8 @@
       "best": ["Asian Food"],
       "price": "2591 04 64",
       "phone": "¢3 000 y 4 000",
-      "icon": ""
+      "description":"Asian Food",
+      "icon": "https://maps.google.com/mapfiles/kml/shapes/snack_bar.png"
     },
     {
       "name": "Kedulce",
@@ -467,6 +481,7 @@
       "best": ["Dish of the day", "pastry"],
       "price": "¢2 000 y 3000",
       "phone": "2553 0187",
+      "description":"Dish of the day andpastry",
       "icon": "https://maps.google.com/mapfiles/kml/shapes/coffee.png"
     },
     {
@@ -474,8 +489,8 @@
       "lat": 9.8585884,
       "lng": -83.9173414,
       "best": ["Assorted Sandwiches"],
-      "price": "",
-      "phone": "",
+      "price": "N/A",
+      "phone": "N/A",
       "icon": "https://maps.google.com/mapfiles/kml/shapes/snack_bar.png"
     },
     {
@@ -484,6 +499,7 @@
       "lng": -83.9173414,
       "best": [],
       "price": "",
+      "description": "Chicken",
       "phone": "",
       "icon": "https://maps.google.com/mapfiles/kml/shapes/snack_bar.png"
     }

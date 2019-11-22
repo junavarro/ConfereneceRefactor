@@ -25,28 +25,19 @@ export class MapPage implements AfterViewInit {
 
       mapData.forEach((markerData: any) => {
         const infoWindow = new googleMaps.InfoWindow({
-          content: `<h5>${markerData.name}</h5>
-          <ion-card>
-          <ion-item>
-            <ion-icon name="pin" slot="start"></ion-icon>
-            <ion-label>ion-item in a card, icon left, button right</ion-label>
-            <ion-button fill="outline" slot="end">View</ion-button>
-          </ion-item>
-
-          <ion-card-content>
-            This is content, without any paragraph or header tags,
-            within an ion-card-content element.
-          </ion-card-content>
-        </ion-card>
-                  `
+          content: `
+          <ion-note color="primary">${markerData.name}</ion-note><br>
+          <ion-note color="dark">${markerData.description}</ion-note><br>
+          <ion-note color="danger"> Price: ${markerData.price}</ion-note><br>
+          <ion-note color="secondary">Phone: ${markerData.phone}</ion-note>`
         });
-        
+
         const marker = new googleMaps.Marker({
-          
-          position: {lat: Number (markerData.lat), lng: Number(markerData.lng)},
+
+          position: { lat: Number(markerData.lat), lng: Number(markerData.lng) },
           map,
           title: markerData.name,
-          icon:markerData.icon
+          icon: markerData.icon
         });
 
 
@@ -63,16 +54,16 @@ export class MapPage implements AfterViewInit {
     });
   }
 
-  showFoodPlaces(){
+  showFoodPlaces() {
     console.log("food");
   }
-  showWorkShopPlaces(){
+  showWorkShopPlaces() {
     console.log("workshop");
   }
-  showPlenaryPlaces(){
+  showPlenaryPlaces() {
     console.log("plenary");
   }
-  showTouristicPlaces(){
+  showTouristicPlaces() {
     console.log("tourist");
   }
 }
