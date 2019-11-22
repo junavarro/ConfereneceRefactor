@@ -44,6 +44,11 @@ export class AppComponent implements OnInit {
       title: 'Sponsors',
       url: '/sponsors',
       icon: 'people'
+    },
+    {
+      title: 'Privacy',
+      url: '/privacy',
+      icon: 'warning'
     }
   ];
   loggedIn = false;
