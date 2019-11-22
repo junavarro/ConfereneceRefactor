@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="cr.gotouch.conferenceapp" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>GoTouch Conference App</name>
+    <name>English Congress TEC 2019</name>
     <description>Schedule, speakers, venue.</description>
     <author email="gotouch.tec@gmail.com" href="https://gotouch.cr/">GoTouch sitio Oficial</author>
     <content src="index.html" />
