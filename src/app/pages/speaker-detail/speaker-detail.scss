@@ -4,5 +4,17 @@
 }
 
 .speaker-detail p {
-  color: #60646b;
+  color: #FFF;
+}
+
+.speaker-detail{
+ 
+  --background : var(--ion-color-plenary);
+}
+
+ion-content .ion-padding.speaker-detail{
+  display: flex;
+  
+  justify-content: center;
+  align-items: center;
 }

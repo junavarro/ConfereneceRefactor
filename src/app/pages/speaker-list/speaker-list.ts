@@ -102,4 +102,6 @@ export class SpeakerListPage {
 
     await actionSheet.present();
   }
+
+ 
 }

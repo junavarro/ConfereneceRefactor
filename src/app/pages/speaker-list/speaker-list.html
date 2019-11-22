@@ -14,7 +14,7 @@
       <ion-row class="ion-align-items-stretch">
         <ion-col size="12" size-md="6" *ngFor="let speaker of speakers">
 
-          <div color="workshop">
+          <div color="workshop" routerLink="/app/tabs/speakers/speaker-details/{{speaker.objectKey}}">
 
             <ion-grid color="workshop">
               <ion-row 	>
@@ -48,9 +48,9 @@
                           {{speaker.social[0].user}}
                         </p>
                       </ion-col>
-                      <ion-col class="ion-align-self-center" size="2">
+                      <!-- <ion-col class="ion-align-self-center" size="2">
                         <ion-icon class="white-text" name="arrow-down"></ion-icon>
-                      </ion-col>
+                      </ion-col> -->
                     </ion-row>
                   </ion-grid>
                 </ion-col>
