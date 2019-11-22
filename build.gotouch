@@ -1,0 +1,5 @@
+keytool -genkey -v -keystore conferenceEnglish-key.keystore -alias conferenceEnglish -keyalg RSA -keysize 2048 -validity 10000
+jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore conferenceEnglish-key.keystore /home/gotouch/projects/ConferenceRefactor/platforms/android/app/build/outputs/apk/release/app-release-unsigned.apk conferenceEnglish
+zipalign -v 4 C:\Users\GoTouch\projects\dop\platforms\android\app\build\outputs\apk\release\app-release-unsigned.apk OpcionTEC.apk
+conference2019# clave
+zipalign -v 4 /home/gotouch/projects/ConferenceRefactor/platforms/android/app/build/outputs/apk/release/app-release-unsigned.apk ConferenceTEC.apk
