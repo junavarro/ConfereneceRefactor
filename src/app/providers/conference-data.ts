@@ -185,4 +185,9 @@ export class ConferenceData {
   getSponsors(){
     return this.db.collection('sponsors').valueChanges();
   }
+
+  registerToken(token:string, deviceId:string){
+    console.log(deviceId,token);
+    this.db.collection('devices').doc(deviceId).set({ 'token': token,'deviceId': deviceId });
+  }
 }

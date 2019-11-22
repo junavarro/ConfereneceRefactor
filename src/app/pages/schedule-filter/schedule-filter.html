@@ -21,28 +21,28 @@
     <ion-list-header>Types</ion-list-header>
 
     <!-- <ion-item *ngFor="let track of eventsTypes">
-      <ion-icon *ngIf="ios" slot="start" [name]="track.icon" color="medium"></ion-icon>
+      <ion-icon *ngIf="ios" slot="start" [name]="track.icon.displayName" color="medium"></ion-icon>
       <ion-label>{{track.displayName}}</ion-label>
       <ion-checkbox [(ngModel)]="track.isChecked"></ion-checkbox>
     </ion-item> -->
 
     <ion-item >
-      <ion-icon *ngIf="ios" slot="start" [name]="track.icon" color="medium"></ion-icon>
+      <ion-icon *ngIf="ios" slot="start" [name]="options.plenary.displayName" color="medium"></ion-icon>
       <ion-label>{{options.plenary.displayName}}</ion-label>
       <ion-checkbox [(ngModel)]="options.plenary.isChecked"></ion-checkbox>
     </ion-item>
     <ion-item >
-      <ion-icon *ngIf="ios" slot="start" [name]="options.icon" color="medium"></ion-icon>
+      <ion-icon *ngIf="ios" slot="start" [name]="options.food.displayName" color="medium"></ion-icon>
       <ion-label>{{options.food.displayName}}</ion-label>
       <ion-checkbox [(ngModel)]="options.food.isChecked"></ion-checkbox>
     </ion-item>
     <ion-item >
-      <ion-icon *ngIf="ios" slot="start" [name]="options.icon" color="medium"></ion-icon>
+      <ion-icon *ngIf="ios" slot="start" [name]="options.workshop.displayName" color="medium"></ion-icon>
       <ion-label>{{options.workshop.displayName}}</ion-label>
       <ion-checkbox [(ngModel)]="options.workshop.isChecked"></ion-checkbox>
     </ion-item>
     <ion-item >
-      <ion-icon *ngIf="ios" slot="start" [name]="options.icon" color="medium"></ion-icon>
+      <ion-icon *ngIf="ios" slot="start" [name]="options.other.displayName" color="medium"></ion-icon>
       <ion-label>{{options.other.displayName}}</ion-label>
       <ion-checkbox [(ngModel)]="options.other.isChecked"></ion-checkbox>
     </ion-item>

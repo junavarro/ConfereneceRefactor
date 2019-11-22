@@ -17,7 +17,7 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { ComponentsModule } from './components/components.module';
 import { EventQueryPipe } from './pipes/event-query/event-query.pipe';
-
+import { FCM } from '@ionic-native/fcm/ngx';
 
 @NgModule({
   imports: [
@@ -35,7 +35,7 @@ import { EventQueryPipe } from './pipes/event-query/event-query.pipe';
     ComponentsModule
   ],
   declarations: [AppComponent],
-  providers: [InAppBrowser, SplashScreen, StatusBar],
+  providers: [InAppBrowser, SplashScreen, StatusBar,FCM],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
